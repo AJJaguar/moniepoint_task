@@ -43,6 +43,7 @@ class _CalculateViewState extends State<CalculateView> {
             duration: const Duration(milliseconds: 500), // Animation duration
             height: appBarHeight,
             child: AppBar(
+              centerTitle: true,
               title: const FaderWidget(
                 offset: Offset(0, 2),
                 child: Text(

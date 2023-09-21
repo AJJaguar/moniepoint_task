@@ -25,19 +25,22 @@ class _ShipmentViewState extends State<ShipmentView>
 
   @override
   Widget build(BuildContext context) {
-    
     final controller = useTabController(initialLength: 5);
     final animController =
         useAnimationController(duration: const Duration(milliseconds: 500));
     useListenable(controller);
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.deepPurple,
           // leading: CupertinoNavigationBarBackButton(),
-          title: const FaderWidget(child: Text('Shipment history', style: TextStyle(
-
-            fontSize: 10,
-          ),)),
+          title: const FaderWidget(
+              child: Text(
+            'Shipment history',
+            style: TextStyle(
+              fontSize: 16,
+            ),
+          )),
 
           bottom: FaderWidget(
             controller: animController,
@@ -161,8 +164,6 @@ class TabBarLabel extends StatelessWidget {
             child: Text(length!));
   }
 }
-
-
 
 class ShipmentWidget extends StatelessWidget {
   final ShipmentInfo shipmentInfo;
