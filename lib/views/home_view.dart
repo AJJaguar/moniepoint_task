@@ -3,7 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:moniepoint_task/pages/search_view.dart';
+import 'package:moniepoint_task/views/search_view.dart';
+
+import '../shared/shared.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

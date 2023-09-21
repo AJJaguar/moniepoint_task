@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import '../shared/shared.dart';
+
 class SuccessPage extends StatefulWidget {
   const SuccessPage({super.key});
 
@@ -160,30 +162,11 @@ class _SuccessPageState extends State<SuccessPage>
             ),
             _buildSlideTransition(
               isVisible6,
-              InkWell(
+              AppButton(
                 onTap: () {
-                 
+                  Navigator.of(context).popUntil((route) => route.isFirst);
                 },
-                child: InkWell(
-                  onTap: () {
-                    Navigator.of(context).popUntil((route) => route.isFirst);
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: const Color(0XFFF17922),
-                        borderRadius: BorderRadius.circular(30.0)),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15, vertical: 15),
-                    width: double.infinity,
-                    child: const Center(
-                      child: Text(
-                        'Back to home',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                  ),
-                ),
+                text: 'Back to home',
               ),
             )
           ],

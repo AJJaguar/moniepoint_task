@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:moniepoint_task/pages/search_view.dart';
-import 'package:moniepoint_task/pages/success_view.dart';
+import 'package:moniepoint_task/views/search_view.dart';
+import 'package:moniepoint_task/views/success_view.dart';
 
 import '../shared/fader_widget.dart';
+import '../shared/shared.dart';
 
 class CalculateView extends StatefulWidget {
   const CalculateView({super.key});
@@ -112,7 +113,7 @@ class _CalculateViewState extends State<CalculateView> {
                   const Text(
                     'What are you sending?',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       color: Colors.grey,
                     ),
                   ),
@@ -171,7 +172,7 @@ class _CalculateViewState extends State<CalculateView> {
                   const Text(
                     'What are you sending?',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       color: Colors.grey,
                     ),
                   ),
@@ -189,33 +190,18 @@ class _CalculateViewState extends State<CalculateView> {
                     ),
                   ),
                   const SizedBox(height: 30),
-                  InkWell(
+                  AppButton(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SuccessPage(),
+                          builder: (context) => const SuccessPage(),
                         ),
                       );
                     },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: const Color(0XFFF17922),
-                          borderRadius: BorderRadius.circular(30.0)),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 15),
-                      width: double.infinity,
-                      child: const Center(
-                        child: Text(
-                          'Calculate',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                  )
+                    text: 'Calculate',
+                    fontSize: 18,
+                  ),
                 ],
               ),
             ),
@@ -241,7 +227,7 @@ class DestinationWidget extends StatelessWidget {
       fillColor: const Color(0xFFF9F8F9),
       hintText: hintext,
       hintStyle: const TextStyle(
-        fontSize: 18,
+        fontSize: 16,
         color: Colors.grey,
       ),
       filled: true,
@@ -255,6 +241,7 @@ class DestinationWidget extends StatelessWidget {
         Icon(
           icon,
           color: Colors.grey,
+          size: 20,
         ),
         const SizedBox(
           height: 30,
@@ -286,7 +273,6 @@ class _ChipButtonState extends State<ChipButton> {
         onSelected: (value) {
           setState(() {
             isSelected = !isSelected;
-            print(isSelected);
           });
         },
         side: const BorderSide(

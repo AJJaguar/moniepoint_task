@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moniepoint_task/pages/dashboard_view.dart';
+import 'package:moniepoint_task/views/dashboard_view.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:moniepoint_task/pages/search_view.dart';
-import 'package:moniepoint_task/pages/shipment_view/shipment_view.dart';
+import 'package:moniepoint_task/views/search_view.dart';
+import 'package:moniepoint_task/views/shipment_view/shipment_view.dart';
 
+import '../shared/shared.dart';
 import 'calculate_view.dart';
 import 'home_view.dart';
 import 'profile_view.dart';

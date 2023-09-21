@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:moniepoint_task/data/fake_data.dart';
 import '../data/models/product_model.dart';
+import '../shared/shared.dart';
 
 class SearchView extends StatefulHookWidget {
   const SearchView({super.key});

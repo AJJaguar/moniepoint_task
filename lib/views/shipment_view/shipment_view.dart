@@ -1,13 +1,7 @@
-import 'dart:async';
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:moniepoint_task/pages/search_view.dart';
-import 'package:moniepoint_task/shipment_widget.dart';
 
 import '../../shared/shared.dart';
 import 'tabs.dart';
